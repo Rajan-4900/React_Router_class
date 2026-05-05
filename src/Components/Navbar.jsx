@@ -15,8 +15,23 @@ const Navbar = () => {
         })} 
         to={'/'}>Home</NavLink>
 
-        <Link style={{ margin: '10px', textDecoration:"none", color:"black"}} to={'/about'}>About</Link>
-        <Link style={{ margin: '10px', textDecoration:"none", color:"black" }} to={'/contact'}>Contact Us</Link>
+        <NavLink style={({ isActive }) => ({ 
+          color: isActive ? "white" : "black", 
+          backgroundColor: isActive ? "gray" : "transparent", 
+          padding: "5px 10px", 
+          borderRadius: "5px", 
+          textDecoration: "none" 
+        })}
+        to={'/about'}>About</NavLink>
+        
+        <NavLink style={({ isActive }) => ({ 
+          color: isActive ? "white" : "black", 
+          backgroundColor: isActive ? "gray" : "transparent", 
+          padding: "5px 10px", 
+          borderRadius: "5px", 
+          textDecoration: "none" 
+        })}
+        to={'/contact'}>Contact Us</NavLink>
       </div>
     </>
   )
