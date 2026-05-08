@@ -5,6 +5,7 @@ import About from './Pages/About'
 import Contact from './Pages/Contact'
 import Navbar from './Components/Navbar'
 import User from './Pages/User'
+import DynamicUser from './Pages/DynamicUser'
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
         <Route path='/about' element={<About />} />
         <Route path='/contact' element={<Contact />} />
         <Route path='/user' element={<User />} />
+        <Route path='/user/:id' element={<DynamicUser />} />
 
       </Routes>
     </Router>

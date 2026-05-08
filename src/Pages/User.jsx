@@ -11,7 +11,8 @@ const User = () => {
     return (
         <>
             {user.map((data) => <div key={data.id}>
-                <Link>
+                {/* this is a Dynamic Routing which if we click the link inside the body it will redirect to anaother page of same page  */}
+                <Link to={`/user/${data.id}`}>
                     <h1>{data.name}</h1>
                 </Link>
             </div>)}
