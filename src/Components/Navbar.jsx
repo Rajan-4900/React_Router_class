@@ -4,7 +4,7 @@ import { Link, NavLink } from 'react-router-dom'
 const Navbar = () => {
   return (
     <>
-      <div style={{ backgroundColor: 'white', padding: '10px', marginBottom: '50px' }}>
+      <div style={{ backgroundColor: 'white', padding: '10px', marginBottom: '30px' }}>
         {/* this is used to active any of the link in the site */}
         <NavLink style={({ isActive }) => ({ 
           color: isActive ? "white" : "black", 
@@ -32,6 +32,15 @@ const Navbar = () => {
           textDecoration: "none" 
         })}
         to={'/contact'}>Contact Us</NavLink>
+
+        <NavLink style={({ isActive }) => ({ 
+          color: isActive ? "white" : "black", 
+          backgroundColor: isActive ? "gray" : "transparent", 
+          padding: "5px 10px", 
+          borderRadius: "5px", 
+          textDecoration: "none" 
+        })}
+        to={'/user'}>User</NavLink>
       </div>
     </>
   )
