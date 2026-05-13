@@ -13,15 +13,16 @@ const DynamicUser = () => {
     { id: 3, name: "Raju", gmail: "raju@gmail.com", age: 20 },
     { id: 4, name: "Rajesh", gmail: "rajesh@gmail.com", age: 20 }
   ];
-  const specificUser = user.filter(data => data.id == id) // this will filter the user array and return the specific user object that matches the id from the URL. We use '==' instead of '===' because the id from the URL is a string and the id in the user array is a number.
+  //const specificUser = user.filter(data => data.id == id) // this will filter the user array and return the specific user object that matches the id from the URL. We use '==' instead of '===' because the id from the URL is a string and the id in the user array is a number.
+  const specificUser = user.find(data => data.id == id) // this will filter the user array and return the specific user object that matches the id from the URL. We use '==' instead of '===' because the id from the URL is a string and the id in the user array is a number.
   console.log(specificUser) // this will return an array with the specific user object that matches the id from the URL.
   return (
     // this will displays the values in the screen instead of in the console. We use specificUser[0] because filter() returns an array and we want to access the first element of that array which is the specific user object.
     <div>
-      <h1>ID : {specificUser[0].id}</h1>
-      <h1>Name : {specificUser[0].name}</h1>
-      <h1>Gmail : {specificUser[0].gmail}</h1>
-      <h1>Age : {specificUser[0].age}</h1>
+      <h1>ID : {specificUser.id}</h1>
+      <h1>Name : {specificUser.name}</h1>
+      <h1>Gmail : {specificUser.gmail}</h1>
+      <h1>Age : {specificUser.age}</h1>
     </div>
   )
 }
