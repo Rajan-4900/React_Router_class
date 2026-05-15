@@ -6,12 +6,14 @@ import Contact from './Pages/Contact'
 import Navbar from './Components/Navbar'
 import User from './Pages/User'
 import DynamicUser from './Pages/DynamicUser'
+import Nav from './Components/Nav'
 
 const App = () => {
   return (
     <>
     <Router>
-      <Navbar />
+      {/* <Navbar /> */}
+      <Nav /> 
       <Routes>
         {/* this "<Route /> Use to add the path to the search link in the browser" */}
         <Route path='/' element={<Home />} />
