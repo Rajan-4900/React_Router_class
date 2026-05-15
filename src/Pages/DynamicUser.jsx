@@ -1,8 +1,9 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
+import { useLocation, useParams } from 'react-router-dom'
 
 const DynamicUser = () => {
   // console.log(useParams())
+  
 
   // useParams() is a hook that returns an object of key/value pairs of the dynamic params from the current URL that were matched by the <Route path>.
   // In this case, it will return an object with the key 'id' and the value will be whatever is in the URL after '/user/'.
@@ -16,6 +17,7 @@ const DynamicUser = () => {
   //const specificUser = user.filter(data => data.id == id) // this will filter the user array and return the specific user object that matches the id from the URL. We use '==' instead of '===' because the id from the URL is a string and the id in the user array is a number.
   const specificUser = user.find(data => data.id == id) // this will filter the user array and return the specific user object that matches the id from the URL. We use '==' instead of '===' because the id from the URL is a string and the id in the user array is a number.
   console.log(specificUser) // this will return an array with the specific user object that matches the id from the URL.
+  console.log(useLocation()) // this will return an object with the current URL and other information about the location.
   return (
     // this will displays the values in the screen instead of in the console. We use specificUser[0] because filter() returns an array and we want to access the first element of that array which is the specific user object.
     <div>
