@@ -18,14 +18,23 @@ const DynamicUser = () => {
   const specificUser = user.find(data => data.id == id) // this will filter the user array and return the specific user object that matches the id from the URL. We use '==' instead of '===' because the id from the URL is a string and the id in the user array is a number.
   console.log(specificUser) // this will return an array with the specific user object that matches the id from the URL.
   console.log(useLocation()) // this will return an object with the current URL and other information about the location.
+
+  const Location = useLocation(); // this will return an object with the current URL and other information about the location.
   return (
     // this will displays the values in the screen instead of in the console. We use specificUser[0] because filter() returns an array and we want to access the first element of that array which is the specific user object.
     <div>
+
       <h1>ID : {specificUser.id}</h1>
       <h1>Name : {specificUser.name}</h1>
       <h1>Gmail : {specificUser.gmail}</h1>
       <h1>Age : {specificUser.age}</h1>
+      
+      {/* this will show the name of the path selected from the specific user name */}
+      {Location.pathname == "/user/1" && (<div><h1>Hello {specificUser.name}</h1></div>)} 
     </div>
+  
+
+    
   )
 }
 
