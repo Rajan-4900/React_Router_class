@@ -29,7 +29,7 @@ const Nav = () => {
                     <Link to="/user">User</Link>
                 </li>
                 <li>
-                    <button onClick={handleLogin}>Log In</button>
+                    <button onClick={handleLogout}>Log Out</button>
                 </li>
                 </>)}
 
@@ -41,7 +41,7 @@ const Nav = () => {
                     <Link to="/contact">Contact</Link>
                 </li>
                 <li>
-                    <button onClick={handleLogout}>Log Out</button>
+                    <button onClick={handleLogin}>Log In</button>
                 </li>
                 </>)}
 
