@@ -8,7 +8,7 @@ const Product = () => {
         <nav>
             <Link to="/phones">Phones</Link>
             <Link to="/laptops">Laptops</Link>
-            <Link to="/cameras">Cameras</Link>
+            <Link to="/camera">Camera</Link>
         </nav>
     </div>
   )
@@ -25,6 +25,6 @@ function Laptops() {
     return <h3>Laptops Category</h3>
 }
 
-function Cameras() {
-    return <h3>Cameras Category</h3>
+function Camera() {
+    return <h3>Camera Category</h3>
 }
