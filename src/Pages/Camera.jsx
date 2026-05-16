@@ -2,7 +2,9 @@ import React from 'react'
 
 const Camera = () => {
   return (
-    <div>Camera</div>
+    <div>
+      <h1>This is the Camera Page</h1>
+    </div>
   )
 }
 

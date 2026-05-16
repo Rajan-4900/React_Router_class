@@ -2,7 +2,9 @@ import React from 'react'
 
 const Phones = () => {
   return (
-    <div>Phones</div>
+    <div>
+      <h1>This is the Phone Page</h1>
+    </div>
   )
 }
 

@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { Outlet } from 'react-router-dom'
 
 const Layout = () => {
     return (
@@ -15,6 +16,7 @@ const Layout = () => {
                 </header>
 
                 <main>
+                    <Outlet /> {/* this is used to render the child component of the parent component in the layout */}
                 </main>
 
                 <footer>
